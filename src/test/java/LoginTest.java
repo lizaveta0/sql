@@ -35,9 +35,9 @@ public class LoginTest {
 
     @Test
     public void testLoginPositive() {
-        String code = getVerificationCode();
         loginPage.fillForm(login, password);
         verificationPage = new VerificationPage();
+        String code = getVerificationCode();
         verificationPage.fillVerificationForm(code);
         dashboardPage = new DashboardPage();
         dashboardPage.checkLoadPage();
